@@ -5,20 +5,14 @@
 //  Created by Nic Deane on 13/12/20.
 //
 
-import Foundation
+import UIKit
 
 struct GameBrain {
-    var playerLeft = 0
-    var playerRight = 0
+    let images = [ #imageLiteral(resourceName: "rock"), #imageLiteral(resourceName: "paper"), #imageLiteral(resourceName: "scissors")]
     
-    
-    
-    func getWinner() -> Int {
-        let fuckYou = [0,1,2]
-        let choice = fuckYou.randomElement()
-        return choice!
+    var playGame : UIImage {
+       return images.randomElement()!
     }
-    
     
 }
 
